@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3000;
 app.get('/', (req, res) => {
   res.json({
     status: "success",
-    message: "🚀 Hello World! I have tried Github actions with this repo!",
+    message: "🚀 Hello Sekarrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr!",
     timestamp: new Date()
   });
 });
