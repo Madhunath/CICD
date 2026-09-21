@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3000;
 app.get('/', (req, res) => {
   res.json({
     status: "success",
-    message: "🚀 Hello World! Deployed automatically via GitHub Actions & Docker!",
+    message: "🚀 Hello World! Actually GitHub actions are working fine, This is a great job Madhunath!",
     timestamp: new Date()
   });
 });
