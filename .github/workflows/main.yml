@@ -1,0 +1,28 @@
+name: Python Test CI Pipeline
+
+# When should this pipeline run?
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+# What should the pipeline do?
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest    # Spin up a clean Ubuntu virtual machine
+
+    steps:
+      - name: 1. Download our code into the runner
+        uses: actions/checkout@v4
+
+      - name: 2. Install Python on the machine
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: 3. Install Pytest
+        run: pip install pytest
+
+      - name: 4. Run our automated tests
+        run: pytest
